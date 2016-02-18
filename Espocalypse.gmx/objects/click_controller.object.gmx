@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>globalvar clickQueue;
+clickQueue = ds_priority_create();
 </string>
           </argument>
         </arguments>
@@ -48,12 +49,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (ds_priority_size(g_clickQueue) &gt; 0) {
-    var _topmostObject = ds_priority_find_min(g_clickQueue);
+            <string>if (ds_priority_size(global.clickQueue) &gt; 0) {
+    var _topmostObject = ds_priority_find_min(global.clickQueue);
     with (_topmostObject) {
         event_user(0);
     }
-    ds_priority_clear(g_clickQueue);
+    ds_priority_clear(global.clickQueue);
 }
 </string>
           </argument>

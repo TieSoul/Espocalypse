@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>ds_priority_add(clickQueue, id, depth);
+            <string>if not (instance_exists(Textbox)) {
+    ds_priority_add(global.clickQueue, id, depth);
+}
 </string>
           </argument>
         </arguments>

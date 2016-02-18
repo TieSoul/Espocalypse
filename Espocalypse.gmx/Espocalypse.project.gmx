@@ -8,6 +8,7 @@
   <sprites name="sprites">
     <sprite>sprites\spr_textbox</sprite>
     <sprite>sprites\test_box</sprite>
+    <sprite>sprites\test_box_red</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -20,6 +21,8 @@
     <object>objects\clickable</object>
     <object>objects\click_controller</object>
     <object>objects\c_t_1</object>
+    <object>objects\screen_shake</object>
+    <object>objects\c_t_2</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
