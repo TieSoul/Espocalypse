@@ -6,7 +6,7 @@
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
-  <maskName>&lt;undefined&gt;</maskName>
+  <maskName>inv_window</maskName>
   <events>
     <event eventtype="0" enumb="0">
       <action>
@@ -25,7 +25,42 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>display_text("test", "test test", "test test test", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16");
+            <string>globalvar hand_object;
+hand_object = "";
+globalvar inventory;
+inventory[0] = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="6" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>x_ = mouse_x - x;
+y_ = mouse_y - y;
+
+if (y_ &gt; 19 and y_ &lt; 83) {
+    if ((x_ - 20) % 83) &lt;= 64 {
+        i = floor((x_ - 20) / 83);
+        if (array_length_1d(inventory) &gt; i and is_string(inventory[i]))
+            hand_object = inventory[i];
+    }
+}
 </string>
           </argument>
         </arguments>
@@ -48,7 +83,17 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text(0, window_get_height() - 100, hand_object);
+            <string>x = view_xview[0];
+y = window_get_height() - 100 + view_yview[0];
+draw_sprite(inv_window, 0, 0, window_get_height()-100);
+for (var i = 0; i &lt; array_length_1d(inventory); i++) {
+    if (is_string(inventory[i])) {
+        spr = asset_get_index("inv_" + inventory[i]);
+        if (spr != -1) {
+            draw_sprite(spr, 0, 83*i+20, window_get_height() - 83);
+        }
+    }
+}
 </string>
           </argument>
         </arguments>

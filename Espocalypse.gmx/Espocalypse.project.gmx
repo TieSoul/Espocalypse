@@ -9,11 +9,14 @@
     <sprite>sprites\spr_textbox</sprite>
     <sprite>sprites\test_box</sprite>
     <sprite>sprites\test_box_red</sprite>
+    <sprite>sprites\inv_window</sprite>
+    <sprite>sprites\inv_redbox</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\display_text.gml</script>
+    <script>scripts\add_inv.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\Textbox</object>
@@ -23,6 +26,8 @@
     <object>objects\c_t_1</object>
     <object>objects\screen_shake</object>
     <object>objects\c_t_2</object>
+    <object>objects\inv_controller</object>
+    <object>objects\c_t_3</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
