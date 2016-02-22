@@ -55,9 +55,12 @@
     <instance objName="c_t_1" x="199" y="109" name="inst_744C22E8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="screen_shake" x="113" y="313" name="inst_CA7A0552" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="click_controller" x="29" y="43" name="inst_776B8A57" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="c_t_2" x="208" y="117" name="inst_DDE5E8B9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="into_inv" x="208" y="117" name="inst_DDE5E8B9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="inv_controller" x="30" y="98" name="inst_E4F34BB0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="c_t_3" x="408" y="295" name="inst_1EDB55CB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="redbox" x="210" y="120" name="inst_2472DC5E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="c_t_4" x="109" y="226" name="inst_623FE942" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="bluebox" x="221" y="134" name="inst_2EB7E136" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

@@ -11,6 +11,7 @@
     <sprite>sprites\test_box_red</sprite>
     <sprite>sprites\inv_window</sprite>
     <sprite>sprites\inv_redbox</sprite>
+    <sprite>sprites\inv_bluebox</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -25,12 +26,16 @@
     <object>objects\click_controller</object>
     <object>objects\c_t_1</object>
     <object>objects\screen_shake</object>
-    <object>objects\c_t_2</object>
+    <object>objects\into_inv</object>
     <object>objects\inv_controller</object>
     <object>objects\c_t_3</object>
+    <object>objects\redbox</object>
+    <object>objects\c_t_4</object>
+    <object>objects\bluebox</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
+    <room>rooms\room1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

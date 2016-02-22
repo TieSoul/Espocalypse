@@ -1,6 +1,6 @@
 {
     for (var i = 0; i < array_length_1d(inventory); i++) {
-        if (inventory[i] == 0) {
+        if not is_string(inventory[i]) {
             inventory[i] = argument0;
             return i;
         }

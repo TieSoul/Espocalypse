@@ -54,9 +54,9 @@ inventory[0] = 0;
             <string>x_ = mouse_x - x;
 y_ = mouse_y - y;
 
-if (y_ &gt; 19 and y_ &lt; 83) {
-    if ((x_ - 20) % 83) &lt;= 64 {
-        i = floor((x_ - 20) / 83);
+if (y_ &gt; 18 and y_ &lt; 82) {
+    if ((x_ - 20) % 82) &lt;= 64 {
+        i = floor((x_ - 20) / 82);
         if (array_length_1d(inventory) &gt; i and is_string(inventory[i]))
             hand_object = inventory[i];
     }
@@ -90,7 +90,10 @@ for (var i = 0; i &lt; array_length_1d(inventory); i++) {
     if (is_string(inventory[i])) {
         spr = asset_get_index("inv_" + inventory[i]);
         if (spr != -1) {
-            draw_sprite(spr, 0, 83*i+20, window_get_height() - 83);
+            draw_sprite(spr, 0, 82*i+20, window_get_height() - 82);
+            if (inventory[i] == hand_object) {
+                draw_rectangle(82*i+10, window_get_height() - 92, 82*i + 94, window_get_height() - (82 - 64 - 10), false);
+            }
         }
     }
 }
@@ -111,5 +114,8 @@ for (var i = 0; i &lt; array_length_1d(inventory); i++) {
   <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
-  <PhysicsShapePoints/>
+  <PhysicsShapePoints>
+    <point>0,0</point>
+    <point>16,16</point>
+  </PhysicsShapePoints>
 </object>
