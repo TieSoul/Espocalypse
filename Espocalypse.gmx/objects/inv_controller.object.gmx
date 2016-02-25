@@ -8,32 +8,6 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>inv_window</maskName>
   <events>
-    <event eventtype="0" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>globalvar hand_object;
-hand_object = "";
-globalvar inventory;
-inventory[0] = 0;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="6" enumb="4">
       <action>
         <libid>1</libid>
@@ -56,11 +30,38 @@ y_ = mouse_y - y;
 
 if (y_ &gt; 18 and y_ &lt; 82) {
     if ((x_ - 20) % 82) &lt;= 64 {
-        i = floor((x_ - 20) / 82);
+        i = floor((x_ - 20) / 82 - 2);
+        if (i &lt; 0) return 0;
         if (array_length_1d(inventory) &gt; i and is_string(inventory[i]))
             hand_object = inventory[i];
     }
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>globalvar hand_object;
+hand_object = "";
+globalvar inventory;
+inventory[0] = 0;
 </string>
           </argument>
         </arguments>
@@ -90,12 +91,29 @@ for (var i = 0; i &lt; array_length_1d(inventory); i++) {
     if (is_string(inventory[i])) {
         spr = asset_get_index("inv_" + inventory[i]);
         if (spr != -1) {
-            draw_sprite(spr, 0, 82*i+20, window_get_height() - 82);
             if (inventory[i] == hand_object) {
-                draw_rectangle(82*i+10, window_get_height() - 92, 82*i + 94, window_get_height() - (82 - 64 - 10), false);
+                draw_rectangle(82*i+10+2*82, window_get_height() - 92, 82*i + 94+2*82, window_get_height() - (82 - 64 - 10), false);
             }
+            draw_sprite(spr, 0, 82*i+20+2*82, window_get_height() - 82);
         }
     }
+}
+
+if (is_string(hand_object)) {
+    new_str = "";
+    upper = true;
+    for (i = 1; i &lt;= string_length(hand_object); i++) {
+        if (upper) {
+            new_str += string_upper(string_char_at(hand_object, i));
+            upper = false;
+        } else if (string_char_at(hand_object, i) == "_") {
+            new_str += " ";
+            upper = true;
+        } else {
+            new_str += string_char_at(hand_object, i);
+        }
+    }
+    draw_text(0, window_get_height() - 100, new_str);
 }
 </string>
           </argument>
