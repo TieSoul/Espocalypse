@@ -25,8 +25,20 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>globalvar shake;
-shake = 0;
+            <string>{
+    self.event_order = 0;
+    display_text("Leraar: Bla bla bla, bla bla bla bla.",
+                 "(Ugh, deze les is zo saai...)",
+                 "(Wanneer zou je natuurkunde nou in het echt kunnen gebruiken?)",
+                 "Jij: Meneer, mag ik naar de WC?",
+                 "(Kan ik even weg uit de les...)",
+                 "Leraar: Ja hoor, ga maar.",
+                 "Je gaat naar de WC en pakt je mobieltje.",
+                 "...",
+                 "...",
+                 "(...Ik zit hier nu al een poosje. Kan nu beter terug naar de les.)",
+                 "Maar opeens...");
+}
 </string>
           </argument>
         </arguments>
@@ -49,25 +61,33 @@ shake = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (shake &gt; 1)
-    {
-        view_xview[0] += round(random(10) - random(10));
-        view_yview[0] += round(random(10) - random(10));
-    }
-    
-shake -= 1;
-if (shake &lt; 0)
-    {
-        shake = 0;
-        if (view_xview[0] &lt; 0 || view_xview[0] &gt; 0 || view_yview[0] &lt; 0 || view_yview[0] &gt; 0)
-            {
-                repeat (8)
-                    {
-                        if (view_xview[0] &lt; 0) {view_xview[0] += 1;} if (view_xview[0] &gt; 0) {view_xview[0] -= 1;}
-                        if (view_yview[0] &lt; 0) {view_yview[0] += 1;} if (view_yview[0] &gt; 0) {view_yview[0] -= 1;}
-                    }
-            }
-    }
+            <string>event_user(self.event_order);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="10">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if not instance_exists(Textbox) {
+    shake = 100;
+    self.event_order += 1;
+}
 </string>
           </argument>
         </arguments>

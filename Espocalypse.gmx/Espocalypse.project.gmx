@@ -33,8 +33,10 @@
     <object>objects\c_t_4</object>
     <object>objects\bluebox</object>
     <object>objects\controller_controller</object>
+    <object>objects\intro_controller</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\room1</room>
     <room>rooms\room_natuurkunde</room>
   </rooms>
   <help>
