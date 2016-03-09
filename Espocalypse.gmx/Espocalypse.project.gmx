@@ -13,7 +13,15 @@
     <sprite>sprites\inv_blauwe_vloeistof</sprite>
     <sprite>sprites\inv_bluebox</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <backgrounds name="intro">
+      <background>background\intro_1</background>
+      <background>background\intro_2</background>
+    </backgrounds>
+    <backgrounds name="scheikunde">
+      <background>background\scheikunde_1</background>
+    </backgrounds>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\display_text.gml</script>
@@ -29,7 +37,7 @@
     <object>objects\into_inv</object>
     <object>objects\inv_controller</object>
     <object>objects\c_t_3</object>
-    <object>objects\blauwe_vloeistof</object>
+    <object>objects\redbox</object>
     <object>objects\c_t_4</object>
     <object>objects\bluebox</object>
     <object>objects\controller_controller</object>

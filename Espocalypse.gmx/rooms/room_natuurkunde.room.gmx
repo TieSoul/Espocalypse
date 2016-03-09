@@ -52,8 +52,10 @@
   </views>
   <instances>
     <instance objName="bluebox" x="67" y="382" name="inst_2220B923" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="blauwe_vloeistof" x="104" y="281" name="inst_D2C9750F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="redbox" x="113" y="304" name="inst_D2C9750F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="controller_controller" x="0" y="0" name="inst_337A9562" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="c_t_1" x="119" y="156" name="inst_BB999F73" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="c_t_3" x="177" y="230" name="inst_9E931B52" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

@@ -67,6 +67,65 @@
         </arguments>
       </action>
     </event>
+    <event eventtype="7" enumb="12">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>{
+    if not instance_exists(Textbox) {
+        // TODO: geluid van slot dat open gaat
+        background_visible[0] = false;
+        background_visible[1] = true;
+        display_text("Je opent de deur van de WC en gaat naar buiten...");
+        self.event_order++;
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="11">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>{
+    if shake == 0 {
+        display_text("(Wat was dat? Een aardbeving?)");
+        self.event_order++;
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="7" enumb="10">
       <action>
         <libid>1</libid>
@@ -86,6 +145,7 @@
             <kind>1</kind>
             <string>if not instance_exists(Textbox) {
     shake = 100;
+    background_visible[0] = true;
     self.event_order += 1;
 }
 </string>
