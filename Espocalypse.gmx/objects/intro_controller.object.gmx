@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>{
+            <string>globalvar slot_open;
+slot_open = false;
+{
     self.event_order = 0;
     display_text("Leraar: Bla bla bla, bla bla bla bla.",
                  "(Ugh, deze les is zo saai...)",
@@ -33,11 +35,8 @@
                  "Jij: Meneer, mag ik naar de WC?",
                  "(Kan ik even weg uit de les...)",
                  "Leraar: Ja hoor, ga maar.",
-                 "Je gaat naar de WC en pakt je mobieltje.",
-                 "...",
-                 "...",
-                 "(...Ik zit hier nu al een poosje. Kan nu beter terug naar de les.)",
-                 "Maar opeens...");
+                 "Je gaat naar de WC...",
+                 "Maar net als je weer terug wilt gaan naar de les...");
 }
 </string>
           </argument>
@@ -67,6 +66,138 @@
         </arguments>
       </action>
     </event>
+    <event eventtype="7" enumb="15">
+      <action>
+        <libid>1</libid>
+        <id>404</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>-1</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_if_number</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>10</kind>
+            <object>Textbox</object>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>422</id>
+        <kind>1</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>224</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_another_room</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>11</kind>
+            <room>room_natuurkunde</room>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>424</id>
+        <kind>2</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+    </event>
+    <event eventtype="7" enumb="14">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if vaag_tijd == 0 {
+    display_text("(...Door die aardbeving ligt er nu overal puin, en gaten in de grond...)",
+                 "(De anderen moeten al het gebouw uit zijn gegaan.)",
+                 "(Ik kan ze beter volgen voor de school helemaal instort.)");
+    self.event_order++;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="13">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if not instance_exists(Textbox) {
+    fade(1, 2, 20);
+    self.event_order++;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="7" enumb="12">
       <action>
         <libid>1</libid>
@@ -85,10 +216,9 @@
           <argument>
             <kind>1</kind>
             <string>{
-    if not instance_exists(Textbox) {
+    if slot_open {
         // TODO: geluid van slot dat open gaat
-        background_visible[0] = false;
-        background_visible[1] = true;
+        fade(0, 1, 20);
         display_text("Je opent de deur van de WC en gaat naar buiten...");
         self.event_order++;
     }
@@ -145,7 +275,7 @@
             <kind>1</kind>
             <string>if not instance_exists(Textbox) {
     shake = 100;
-    background_visible[0] = true;
+    fade(-1, 0, 60);
     self.event_order += 1;
 }
 </string>

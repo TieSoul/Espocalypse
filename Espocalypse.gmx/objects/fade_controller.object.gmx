@@ -11,57 +11,74 @@
     <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
-        <id>201</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_create_object</functionname>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>10</kind>
-            <object>click_controller</object>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
+            <kind>1</kind>
+            <string>globalvar vaag_weg;
+vaag_weg = -1;
+globalvar vaag_in;
+vaag_in = -1;
+globalvar vaag_tijd;
+vaag_tijd = 0;
+globalvar totaal_tijd;
+totaal_tijd = 0;
+</string>
           </argument>
         </arguments>
       </action>
+    </event>
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
-        <id>201</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_create_object</functionname>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>10</kind>
-            <object>inv_controller</object>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
+            <kind>1</kind>
+            <string>if vaag_tijd &gt; 0 {
+    if vaag_weg &gt;= 0 {
+        background_alpha[vaag_weg] -= background_alpha[vaag_weg]/vaag_tijd;
+        if background_alpha[vaag_weg] == 0 {
+            background_visible[vaag_weg] = false;
+            background_alpha[vaag_weg] = 1;
+        }
+    }
+    if vaag_in &gt;= 0 {
+        background_visible[vaag_in] = true;
+        background_alpha[vaag_in] += (1-background_alpha[vaag_in])/vaag_tijd;
+    }
+    vaag_tijd -= 1;
+}
+if vaag_tijd == 0 {
+    if vaag_weg &gt;= 0 {
+        background_alpha[vaag_weg] = 1;
+        background_visible[vaag_weg] = false;
+    }
+    if vaag_in &gt;= 0 {
+        background_alpha[vaag_in] = 1;
+    }
+}
+</string>
           </argument>
         </arguments>
       </action>

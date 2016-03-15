@@ -12,6 +12,8 @@
     <sprite>sprites\inv_window</sprite>
     <sprite>sprites\inv_blauwe_vloeistof</sprite>
     <sprite>sprites\inv_bluebox</sprite>
+    <sprite>sprites\doorzichtig</sprite>
+    <sprite>sprites\arrow</sprite>
   </sprites>
   <backgrounds name="background">
     <backgrounds name="intro">
@@ -21,31 +23,45 @@
     <backgrounds name="scheikunde">
       <background>background\scheikunde_1</background>
     </backgrounds>
+    <backgrounds name="natuurkunde">
+      <background>background\natuurkunde_gang</background>
+      <background>background\natuurkunde_B12</background>
+    </backgrounds>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\display_text.gml</script>
     <script>scripts\add_inv.gml</script>
+    <script>scripts\fade.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\Textbox</object>
     <object>objects\test_object</object>
     <object>objects\clickable</object>
-    <object>objects\click_controller</object>
-    <object>objects\c_t_1</object>
     <object>objects\screen_shake</object>
     <object>objects\into_inv</object>
-    <object>objects\inv_controller</object>
     <object>objects\c_t_3</object>
     <object>objects\redbox</object>
     <object>objects\c_t_4</object>
     <object>objects\bluebox</object>
-    <object>objects\controller_controller</object>
-    <object>objects\intro_controller</object>
+    <objects name="intro">
+      <object>objects\slot</object>
+      <object>objects\intro_controller</object>
+    </objects>
+    <objects name="controllers">
+      <object>objects\controller_controller</object>
+      <object>objects\fade_controller</object>
+      <object>objects\inv_controller</object>
+      <object>objects\click_controller</object>
+    </objects>
+    <objects name="natuurkunde">
+      <object>objects\deur_B12</object>
+      <object>objects\pijl_omlaag</object>
+    </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room1</room>
     <room>rooms\room_natuurkunde</room>
+    <room>rooms\room_intro</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
