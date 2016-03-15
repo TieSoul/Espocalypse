@@ -17,6 +17,15 @@
     <sprite>sprites\arrow_up</sprite>
     <sprite>sprites\arrow_down</sprite>
     <sprite>sprites\arrow_left</sprite>
+    <sprite>sprites\spr_meetlat</sprite>
+    <sprite>sprites\inv_meetlat</sprite>
+    <sprite>sprites\spr_tape</sprite>
+    <sprite>sprites\inv_tape</sprite>
+    <sprite>sprites\inv_linialen</sprite>
+    <sprite>sprites\spr_rulers</sprite>
+    <sprite>sprites\spr_decision_box</sprite>
+    <sprite>sprites\spr_links</sprite>
+    <sprite>sprites\spr_rechts</sprite>
   </sprites>
   <backgrounds name="background">
     <backgrounds name="intro">
@@ -29,6 +38,7 @@
     <backgrounds name="natuurkunde">
       <background>background\natuurkunde_gang</background>
       <background>background\natuurkunde_B12</background>
+      <background>background\natuurkunde_gaten</background>
     </backgrounds>
   </backgrounds>
   <paths name="paths"/>
@@ -60,11 +70,24 @@
     <objects name="natuurkunde">
       <object>objects\deur_B12</object>
       <object>objects\pijl_omlaag</object>
+      <object>objects\meetlat</object>
+      <object>objects\tape</object>
+      <object>objects\linialen</object>
+      <object>objects\pijl_rechts</object>
+      <object>objects\pijl_omlaag_2</object>
+      <object>objects\gat1</object>
+      <object>objects\gat2</object>
+      <object>objects\rots</object>
+      <object>objects\decision_controller</object>
+      <object>objects\decision_box</object>
+      <object>objects\btn_links</object>
+      <object>objects\btn_rechts</object>
     </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_natuurkunde</room>
     <room>rooms\room_intro</room>
+    <room>rooms\room_wiskunde</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
