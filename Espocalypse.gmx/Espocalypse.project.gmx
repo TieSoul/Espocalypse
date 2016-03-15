@@ -13,7 +13,10 @@
     <sprite>sprites\inv_blauwe_vloeistof</sprite>
     <sprite>sprites\inv_bluebox</sprite>
     <sprite>sprites\doorzichtig</sprite>
-    <sprite>sprites\arrow</sprite>
+    <sprite>sprites\arrow_right</sprite>
+    <sprite>sprites\arrow_up</sprite>
+    <sprite>sprites\arrow_down</sprite>
+    <sprite>sprites\arrow_left</sprite>
   </sprites>
   <backgrounds name="background">
     <backgrounds name="intro">
