@@ -32,8 +32,10 @@ if (y_ &gt; 18 and y_ &lt; 82) {
     if ((x_ - 20) % 82) &lt;= 64 {
         i = floor((x_ - 20) / 82 - 2);
         if (i &lt; 0) return 0;
-        if (array_length_1d(inventory) &gt; i and is_string(inventory[i]))
-            hand_object = inventory[i];
+        if (array_length_1d(inventory) &gt; i and is_string(inventory[i])) {
+            if (hand_object == inventory[i]) hand_object = "";
+            else hand_object = inventory[i];
+        }
     }
 }
 </string>

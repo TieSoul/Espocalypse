@@ -3,7 +3,7 @@
   <spriteName>doorzichtig</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>1</depth>
+  <depth>0</depth>
   <persistent>0</persistent>
   <parentName>clickable</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,8 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>display_text("(Ik kan niet over deze rots klimmen, veel te glibberig.)",
-             "(Waarom zijn er eigenlijk rotsen in de school!?)");
+            <string>display_text("(Om bij de uitgang te komen moet ik door deze deur...)");
 </string>
           </argument>
         </arguments>

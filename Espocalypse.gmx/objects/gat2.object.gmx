@@ -67,8 +67,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>display_text("(Oke, dus voorzichtig de linialen langs het gat schuiven...)",
-             "(Het gat is ongeveer 4 linialen.)",
+            <string>display_text("(Hmm, als ik de linialen nou voorzichtig langs het gat schuif...?)",
+             "(Ja! Het gat is ongeveer 4 linialen lang.)",
              "(Een liniaal is 30 centimeter, dus dat kan ik uitrekenen.)");
 g21 = true;
 </string>
@@ -228,11 +228,11 @@ g22 = true;
             <kind>1</kind>
             <string>display_text("(Hrm, er zijn hier twee gaten van vershillende grootte...)",
              "(Ik kan er niet langs, de randen zijn veel te smal.)",
-             "(Ik zal er overheen moeten springen, maar de vraag is nu welk gat?)",
-             "(Dit doet me denken aan een natuurkunde-opgave...)",
-             "(We moesten berekenen hoe ver iemand kan springen met een bepaalde aanloopafstand.)",
-             "(Als ik het me goed herinner, moet de aanloopafstand groter zijn dan het gat.)",
-             "(Maar hoe ga ik dat meten? Ik zal wel rond gaan kijken...)");
+             "(Ik zal er overheen moeten springen, maar over welk gat?)",
+             "(Wacht, dit doet me denken aan een natuurkunde-opgave! Heb ik toch nog iets aan die lessen gehad...)",
+             "(We moesten berekenen hoe ver je kan springen met een bepaalde aanloopafstand.)",
+             "(Als ik het me goed herinner, *moet de aanloopafstand groter zijn dan het gat*.)",
+             "(Maar hoe ga ik dat meten?!)");
 </string>
           </argument>
         </arguments>

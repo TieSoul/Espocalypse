@@ -136,7 +136,7 @@ instance_destroy();
           <argument>
             <kind>1</kind>
             <string>display_text("Een aantal linialen.",
-             "(Deze zijn allemaal 30 centimeter, vrij kort...)");
+             "(Deze zijn allemaal 30 centimeter. Dat is wel vrij kort...)");
 </string>
           </argument>
         </arguments>

@@ -31,11 +31,10 @@ slot_open = false;
     self.event_order = 0;
     display_text("Leraar: Bla bla bla, bla bla bla bla.",
                  "(Ugh, deze les is zo saai...)",
-                 "(Wanneer zou je natuurkunde nou in het echt kunnen gebruiken?)",
-                 "Jij: Meneer, mag ik naar de WC?",
-                 "(Kan ik even weg uit de les...)",
-                 "Leraar: Ja hoor, ga maar.",
-                 "Je gaat naar de WC...",
+                 "(Wat heb je nou eigenlijk aan natuurkunde? Ik zie er het nut niet van in...)",
+                 "Jij: Meneer, mag ik naar de WC? (Kan ik even weg uit de les...)",
+                 "Leraar: Ja tuurlijk, geen probleem.",
+                 "Je gaat naar de WC.",
                  "Maar net als je weer terug wilt gaan naar de les...");
 }
 </string>
@@ -61,6 +60,59 @@ slot_open = false;
           <argument>
             <kind>1</kind>
             <string>event_user(self.event_order);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="17">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if vaag_tijd == 0 {
+    display_text("(Wat was dat? Een aardbeving?!)",
+                 "(Volgens mij ben ik even flauwgevallen...)");
+    self.event_order = 2;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="16">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if vaag_tijd == 0 {
+    fade(-1, 0, 100);
+    self.event_order = 7;
+}
 </string>
           </argument>
         </arguments>
@@ -162,9 +214,9 @@ slot_open = false;
           <argument>
             <kind>1</kind>
             <string>if vaag_tijd == 0 {
-    display_text("(...Door die aardbeving ligt er nu overal puin, en gaten in de grond...)",
-                 "(De anderen moeten al het gebouw uit zijn gegaan.)",
-                 "(Ik kan ze beter volgen voor de school helemaal instort.)");
+    display_text("(...Wat een puinhoop...!)",
+                 "(De anderen moeten al het gebouw uit zijn gegaan...)",
+                 "(Ik moet snel weg, voordat de school helemaal instort!!)");
     self.event_order++;
 }
 </string>
@@ -215,13 +267,11 @@ slot_open = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>{
-    if slot_open {
-        // TODO: geluid van slot dat open gaat
-        fade(0, 1, 20);
-        display_text("Je opent de deur van de WC en gaat naar buiten...");
-        self.event_order++;
-    }
+            <string>if slot_open {
+    // TODO: geluid van slot dat open gaat
+    fade(0, 1, 20);
+    display_text("Je opent de deur van de WC en gaat naar buiten...");
+    self.event_order++;
 }
 </string>
           </argument>
@@ -245,11 +295,9 @@ slot_open = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>{
-    if shake == 0 {
-        display_text("(Wat was dat? Een aardbeving?)");
-        self.event_order++;
-    }
+            <string>if shake == 0 {
+    fade(0, -1, 100);
+    self.event_order = 6;
 }
 </string>
           </argument>

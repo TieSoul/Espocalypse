@@ -109,13 +109,13 @@ self.eventorder = 0;
             <string>if not instance_exists(Textbox) {
     if decision == 1 {
         display_text("Je valt naar beneden, je hebt de sprong net niet gehaald.",
-                     "Je breekt je been door de harde val op de grond beneden, en zit vast in de school.",
-                     "Je hebt de verkeerde beslissing gemaakt...",
+                     "Je breekt je been door de harde val op de grond, en zit voor altijd vast in de school.",
+                     "Je hebt de verkeerde beslissing genomen...",
                      "                                                               GAME OVER");
     } else {
         display_text("Je haalt de sprong nog net, en komt veilig terecht aan de andere kant.",
                      "(Wow, dat scheelde niks!)",
-                     "(Nu snel naar beneden en de school uit!)");
+                     "(Nu snel naar beneden en weg hier!)");
     }
     self.eventorder++;
 }
@@ -146,8 +146,8 @@ self.eventorder = 0;
     view_yview[0] += 668;
     display_text("Je springt over het gat...",
                  "En...",
-                 "...",
-                 "...");
+                 ".....",
+                 ".......");
     self.eventorder++;
 }
 </string>

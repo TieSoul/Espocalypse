@@ -40,6 +40,9 @@
       <background>background\natuurkunde_B12</background>
       <background>background\natuurkunde_gaten</background>
     </backgrounds>
+    <backgrounds name="wiskunde">
+      <background>background\wiskunde_gang</background>
+    </backgrounds>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -82,6 +85,10 @@
       <object>objects\decision_box</object>
       <object>objects\btn_links</object>
       <object>objects\btn_rechts</object>
+      <object>objects\deur_uitgang</object>
+    </objects>
+    <objects name="wiskunde">
+      <object>objects\deur_op_slot</object>
     </objects>
   </objects>
   <rooms name="rooms">
