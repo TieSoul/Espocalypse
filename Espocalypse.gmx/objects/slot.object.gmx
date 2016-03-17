@@ -28,6 +28,7 @@
             <string>{
     slot_open = true;
     instance_destroy();
+    audio_play_sound(snd_slot, 1, false);
 }
 </string>
           </argument>

@@ -109,9 +109,13 @@ slot_open = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if vaag_tijd == 0 {
+            <string>self.counter--;
+if (vaag_tijd == 0) {
+    audio_stop_all();
+}
+if (self.counter == 0) {
     fade(-1, 0, 100);
-    self.event_order = 7;
+    self.event_order++;
 }
 </string>
           </argument>
@@ -268,7 +272,6 @@ slot_open = false;
           <argument>
             <kind>1</kind>
             <string>if slot_open {
-    // TODO: geluid van slot dat open gaat
     fade(0, 1, 20);
     display_text("Je opent de deur van de WC en gaat naar buiten...");
     self.event_order++;
@@ -296,7 +299,9 @@ slot_open = false;
           <argument>
             <kind>1</kind>
             <string>if shake == 0 {
-    fade(0, -1, 100);
+    audio_stop_sound(snd_aardbeving);
+    fade(0, -1, 50);
+    self.counter = 150;
     self.event_order = 6;
 }
 </string>
@@ -322,7 +327,9 @@ slot_open = false;
           <argument>
             <kind>1</kind>
             <string>if not instance_exists(Textbox) {
-    shake = 100;
+    audio_play_sound(snd_aardbeving, 1, true);
+    audio_play_sound(snd_luchtalarm, 1, true);
+    shake = 500;
     fade(-1, 0, 60);
     self.event_order += 1;
 }

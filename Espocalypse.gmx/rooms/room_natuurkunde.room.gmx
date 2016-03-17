@@ -32,7 +32,7 @@
   </makerSettings>
   <backgrounds>
     <background visible="-1" foreground="0" name="natuurkunde_gang" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
-    <background visible="0" foreground="0" name="natuurkunde_B12" x="0" y="668" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
+    <background visible="0" foreground="0" name="natuurkunde_B12_liniaal" x="0" y="668" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="natuurkunde_gaten" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -55,9 +55,8 @@
     <instance objName="deur_B12" x="176" y="124" name="inst_4965342D" locked="0" code="" scaleX="3.90000009536743" scaleY="10.40625" colour="4294967295" rotation="0"/>
     <instance objName="fade_controller" x="13" y="1" name="inst_C525A42F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pijl_omlaag" x="456" y="1183" name="inst_0E8D04E0" locked="0" code="" scaleX="2" scaleY="1" colour="1694433280" rotation="0"/>
-    <instance objName="meetlat" x="771" y="942" name="inst_5FD14205" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="tape" x="844" y="1049" name="inst_161541D0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="linialen" x="814" y="991" name="inst_A1BA73AF" locked="0" code="" scaleX="5.90625" scaleY="1.09677422046661" colour="4294967295" rotation="0"/>
+    <instance objName="meetlat" x="908" y="1081" name="inst_5FD14205" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="tape" x="882" y="1075" name="inst_161541D0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pijl_rechts" x="875" y="324" name="inst_A2E52ED2" locked="0" code="" scaleX="1" scaleY="2" colour="1694433280" rotation="0"/>
     <instance objName="pijl_omlaag_2" x="1489" y="507" name="inst_A3284B4D" locked="0" code="" scaleX="2" scaleY="1" colour="1694433280" rotation="0"/>
     <instance objName="gat1" x="1125" y="464" name="inst_EDFC140B" locked="0" code="" scaleX="10.7419357299805" scaleY="2.96875" colour="4294967295" rotation="0"/>
@@ -65,6 +64,7 @@
     <instance objName="decision_controller" x="28" y="3" name="inst_4B502A55" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="rots" x="1461" y="331" name="inst_63E0ADD1" locked="0" code="" scaleX="5.13000011444092" scaleY="7" colour="4294967295" rotation="0"/>
     <instance objName="deur_uitgang" x="1735" y="250" name="inst_1266BC1E" locked="0" code="" scaleX="2.16129040718079" scaleY="6.69000005722046" colour="4294967295" rotation="0"/>
+    <instance objName="linialen" x="740" y="1054" name="inst_3C3CFC16" locked="0" code="" scaleX="4.29032278060913" scaleY="1.22580647468567" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

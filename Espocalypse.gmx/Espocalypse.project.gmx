@@ -4,14 +4,20 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_aardbeving</sound>
+    <sound>sound\snd_luchtalarm</sound>
+    <sound>sound\snd_slot</sound>
+    <sound>sound\snd_deur</sound>
+    <sound>sound\snd_beep</sound>
+    <sound>sound\snd_knal</sound>
+    <sound>sound\main_theme</sound>
+  </sounds>
   <sprites name="sprites">
+    <sprite>sprites\spr_blaadje</sprite>
     <sprite>sprites\spr_textbox</sprite>
-    <sprite>sprites\test_box</sprite>
-    <sprite>sprites\test_box_red</sprite>
     <sprite>sprites\inv_window</sprite>
-    <sprite>sprites\inv_blauwe_vloeistof</sprite>
-    <sprite>sprites\inv_bluebox</sprite>
+    <sprite>sprites\inv_loodnitraat</sprite>
     <sprite>sprites\doorzichtig</sprite>
     <sprite>sprites\arrow_right</sprite>
     <sprite>sprites\arrow_up</sprite>
@@ -26,6 +32,28 @@
     <sprite>sprites\spr_decision_box</sprite>
     <sprite>sprites\spr_links</sprite>
     <sprite>sprites\spr_rechts</sprite>
+    <sprite>sprites\spr_key</sprite>
+    <sprite>sprites\inv_sleutel</sprite>
+    <sprite>sprites\spr_blacklight</sprite>
+    <sprite>sprites\spr_gasbrander</sprite>
+    <sprite>sprites\inv_gasbrander</sprite>
+    <sprite>sprites\inv_natriumazide</sprite>
+    <sprite>sprites\inv_natriumnitraat</sprite>
+    <sprite>sprites\spr_loodnitraat</sprite>
+    <sprite>sprites\spr_natriumnitraat</sprite>
+    <sprite>sprites\spr_erlenmeyer</sprite>
+    <sprite>sprites\spr_vloeistof</sprite>
+    <sprite>sprites\spr_erlenmeyer_r</sprite>
+    <sprite>sprites\spr_erlenmeyer_b</sprite>
+    <sprite>sprites\spr_erlenmeyer_g</sprite>
+    <sprite>sprites\spr_erlenmeyer_rr</sprite>
+    <sprite>sprites\spr_erlenmeyer_bb</sprite>
+    <sprite>sprites\spr_erlenmeyer_gg</sprite>
+    <sprite>sprites\spr_erlenmeyer_rb</sprite>
+    <sprite>sprites\spr_erlenmeyer_rg</sprite>
+    <sprite>sprites\spr_erlenmeyer_bg</sprite>
+    <sprite>sprites\spr_erlenmeyer_rrb</sprite>
+    <sprite>sprites\spr_play_game</sprite>
   </sprites>
   <backgrounds name="background">
     <backgrounds name="intro">
@@ -34,15 +62,32 @@
     </backgrounds>
     <backgrounds name="scheikunde">
       <background>background\scheikunde_1</background>
+      <background>background\scheikunde_gang</background>
+      <background>background\scheikunde_2</background>
     </backgrounds>
     <backgrounds name="natuurkunde">
       <background>background\natuurkunde_gang</background>
       <background>background\natuurkunde_B12</background>
       <background>background\natuurkunde_gaten</background>
+      <background>background\natuurkunde_B12_liniaal</background>
     </backgrounds>
     <backgrounds name="wiskunde">
       <background>background\wiskunde_gang</background>
+      <background>background\kluis_open</background>
+      <background>background\wiskunde_dicht</background>
+      <background>background\wiskunde_open</background>
+      <background>background\wiskunde_puzzel_0</background>
+      <background>background\wiskunde_puzzel_1</background>
+      <background>background\wiskunde_puzzel_2</background>
+      <background>background\wiskunde_puzzel_3</background>
+      <background>background\wiskunde_puzzel_4</background>
     </backgrounds>
+    <backgrounds name="atrium">
+      <background>background\atrium_trap</background>
+      <background>background\atrium_deur</background>
+      <background>background\atrium_puzzel</background>
+    </backgrounds>
+    <background>background\credits</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -52,14 +97,9 @@
   </scripts>
   <objects name="objects">
     <object>objects\Textbox</object>
-    <object>objects\test_object</object>
     <object>objects\clickable</object>
     <object>objects\screen_shake</object>
     <object>objects\into_inv</object>
-    <object>objects\c_t_3</object>
-    <object>objects\redbox</object>
-    <object>objects\c_t_4</object>
-    <object>objects\bluebox</object>
     <objects name="intro">
       <object>objects\slot</object>
       <object>objects\intro_controller</object>
@@ -88,13 +128,58 @@
       <object>objects\deur_uitgang</object>
     </objects>
     <objects name="wiskunde">
+      <object>objects\sleutel</object>
       <object>objects\deur_op_slot</object>
+      <object>objects\deur_naar_lokaal</object>
+      <object>objects\la</object>
+      <object>objects\kluis</object>
+      <objects name="numpad">
+        <object>objects\numpad_controller</object>
+        <object>objects\numpad</object>
+        <object>objects\numpad_1</object>
+        <object>objects\numpad_0</object>
+        <object>objects\numpad_9</object>
+        <object>objects\numpad_8</object>
+        <object>objects\numpad_7</object>
+        <object>objects\numpad_6</object>
+        <object>objects\numpad_5</object>
+        <object>objects\numpad_4</object>
+        <object>objects\numpad_3</object>
+        <object>objects\numpad_2</object>
+        <object>objects\numpad_c</object>
+      </objects>
+      <object>objects\pijl_omlaag_3</object>
+      <object>objects\blaadje</object>
+      <object>objects\blacklight</object>
+      <object>objects\muur</object>
     </objects>
+    <objects name="scheikunde">
+      <object>objects\deur_geblokkeerd</object>
+      <object>objects\gasbrander</object>
+      <object>objects\kast</object>
+      <object>objects\scheikunde_blaadje</object>
+      <object>objects\loodnitraat</object>
+      <object>objects\natriumnitraat</object>
+      <object>objects\puin</object>
+      <object>objects\erlenmeyer</object>
+      <object>objects\sk_controller</object>
+    </objects>
+    <objects name="atrium">
+      <object>objects\atrium_controller</object>
+      <object>objects\bad_key</object>
+      <object>objects\good_key</object>
+    </objects>
+    <object>objects\music</object>
+    <object>objects\play_game</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room_natuurkunde</room>
+    <room>rooms\hoofdmenu</room>
     <room>rooms\room_intro</room>
+    <room>rooms\room_scheikunde</room>
     <room>rooms\room_wiskunde</room>
+    <room>rooms\room_natuurkunde</room>
+    <room>rooms\atrium</room>
+    <room>rooms\credits_room</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

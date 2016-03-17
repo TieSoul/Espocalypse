@@ -43,7 +43,7 @@ if (y_ &gt; 18 and y_ &lt; 82) {
         </arguments>
       </action>
     </event>
-    <event eventtype="7" enumb="4">
+    <event eventtype="7" enumb="2">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -64,6 +64,7 @@ if (y_ &gt; 18 and y_ &lt; 82) {
 hand_object = "";
 globalvar inventory;
 inventory[0] = 0;
+display_set_gui_size(1024, 768);
 </string>
           </argument>
         </arguments>
@@ -87,16 +88,16 @@ inventory[0] = 0;
           <argument>
             <kind>1</kind>
             <string>x = view_xview[0];
-y = window_get_height() - 100 + view_yview[0];
-draw_sprite(inv_window, 0, 0, window_get_height()-100);
+y = display_get_gui_height() - 100 + view_yview[0];
+draw_sprite(inv_window, 0, 0, display_get_gui_height()-100);
 for (var i = 0; i &lt; array_length_1d(inventory); i++) {
     if (is_string(inventory[i])) {
         spr = asset_get_index("inv_" + inventory[i]);
         if (spr != -1) {
             if (inventory[i] == hand_object) {
-                draw_rectangle(82*i+10+2*82, window_get_height() - 92, 82*i + 94+2*82, window_get_height() - (82 - 64 - 10), false);
+                draw_rectangle(82*i+10+2*82, display_get_gui_height() - 92, 82*i + 94+2*82, display_get_gui_height() - (82 - 64 - 10), false);
             }
-            draw_sprite(spr, 0, 82*i+20+2*82, window_get_height() - 82);
+            draw_sprite(spr, 0, 82*i+20+2*82, display_get_gui_height() - 82);
         }
     }
 }
@@ -115,7 +116,7 @@ if (is_string(hand_object)) {
             new_str += string_char_at(hand_object, i);
         }
     }
-    draw_text(0, window_get_height() - 100, new_str);
+    draw_text(0, display_get_gui_height() - 100, new_str);
 }
 </string>
           </argument>

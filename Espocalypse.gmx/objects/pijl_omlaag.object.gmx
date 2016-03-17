@@ -50,6 +50,7 @@
             <kind>1</kind>
             <string>fade(1, 0, 20);
 alarm[0] = 10;
+audio_play_sound(snd_deur, 1, false);
 </string>
           </argument>
         </arguments>

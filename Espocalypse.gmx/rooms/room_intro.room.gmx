@@ -56,6 +56,7 @@
     <instance objName="click_controller" x="79" y="150" name="inst_443234E8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="fade_controller" x="31" y="173" name="inst_0DDEE4E5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="screen_shake" x="36" y="159" name="inst_48DEEA6C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="inv_controller" x="42" y="147" name="inst_BF7E8736" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
